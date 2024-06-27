@@ -1,59 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import CardMovie from './templates/CardMovie.jsx'
+import React from 'react';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import Footer from './components/footer';
+import './css/App.css'; 
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      <div className='main-container'>
-        <div className='movies-shows-container'>
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-        </div>
-        <div className='movies-shows-container'>
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-        </div>
-      </div>
-    </>
-  )
-}
+    <div className="app">
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
+  );
+};
 
-export default App
+export default App;

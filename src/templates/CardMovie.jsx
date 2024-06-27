@@ -1,23 +1,16 @@
-import React from "react";
-import star from '../assets/star.png'
-import popeye from '../assets/popeye.jpeg'
-import '../css/CardMovie.css'
+import React from 'react';
+import '../css/CardMovie.css'; // Ajusta la ruta si es necesario
 
-function CardMovie(props) {
-
-    return (
-        <div className='card-movie'>
-            <img src={popeye} alt={props.title} className='img-movie'/>
-            <div className='info-movie'>
-                <div className='rating'>
-                    <p>{props.rating}</p>
-                    <img className='star-rating' src={star} alt='star' />
-                </div>
-                <h3>{props.title}</h3>
-                <div className='button-watch-movie'>Watch movie</div>
-            </div>
-        </div>
-    );
-}
+const CardMovie = ({ image, title, rating }) => {
+  return (
+    <div className="card-movie">
+      <img src={image} alt={title} className="card-movie-image" />
+      <div className="card-movie-info">
+        <h3>{title}</h3>
+        <p>Rating: {rating}</p>
+      </div>
+    </div>
+  );
+};
 
 export default CardMovie;

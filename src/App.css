@@ -1,9 +1,0 @@
-.main-container {
-  padding: 30px;
-}
-
-.movies-shows-container, .popular-celebrities {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px
-}
