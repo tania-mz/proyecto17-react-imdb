@@ -1,33 +1,57 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import CardMovie from './templates/CardMovie.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='main-container'>
+        <div className='movies-shows-container'>
+          <CardMovie
+            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
+            title='Popeye'
+            rating='9.5'
+          />
+          <CardMovie
+            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
+            title='Popeye'
+            rating='9.5'
+          />
+          <CardMovie
+            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
+            title='Popeye'
+            rating='9.5'
+          />
+          <CardMovie
+            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
+            title='Popeye'
+            rating='9.5'
+          />
+        </div>
+        <div className='movies-shows-container'>
+          <CardMovie
+            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
+            title='Popeye'
+            rating='9.5'
+          />
+          <CardMovie
+            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
+            title='Popeye'
+            rating='9.5'
+          />
+          <CardMovie
+            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
+            title='Popeye'
+            rating='9.5'
+          />
+          <CardMovie
+            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
+            title='Popeye'
+            rating='9.5'
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
