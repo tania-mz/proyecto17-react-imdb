@@ -4,7 +4,6 @@ import popeye from '../assets/popeye.jpeg'
 import '../css/CardMovie.css'
 
 function CardMovie(props) {
-
     return (
         <div className='card-movie'>
             <img src={popeye} alt={props.title} className='img-movie'/>

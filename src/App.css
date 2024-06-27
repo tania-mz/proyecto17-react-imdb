@@ -7,3 +7,50 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 10px
 }
+
+.main-container h2 {
+  margin-bottom: 20px;
+}
+
+.search-movie {
+  display: flex; 
+  gap: 30px;
+}
+
+.card-movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.movie-generes {
+  border: 2px solid black;
+  padding: 10px;
+  height: 23vh;
+}
+
+.movie-generes ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-generes ul li {
+  margin-bottom: 10px;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.load-previous, .load-next {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 0 10px;
+}
