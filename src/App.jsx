@@ -1,112 +1,22 @@
 import { useState } from 'react'
 import './App.css'
-import CardMovie from './components/CardMovie.jsx'
 import SearchBar from './components/SearchBar.jsx'
-import CardPeople from './components/CardPeople.jsx'
 import { Route, Routes } from "react-router-dom";
-import MovieDetails from './components/MovieDetails.jsx'
-import MoreLikeThis from './components/MoreLikeThis.jsx'
-
-const Home = () => 
-  <div className='main-container'>
-        <h2>Top movies</h2>
-        <div className='movies-shows-container'>
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          
-        </div>
-        <h2>Top Celebrities</h2>
-        <div className='movies-shows-container'>
-          <CardPeople nameCelebritie='Popeye' />
-          <CardPeople nameCelebritie='Popeye' />
-          <CardPeople nameCelebritie='Popeye' />
-          <CardPeople nameCelebritie='Popeye' />
-        </div>
-      </div>;
-
-const SearchMovie = () => 
-  <div className='main-container'>
-    <div className='search-movie'>
-      <div className='card-movies'>
-        <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-      </div>
-      <div className='movie-generes'>
-        <ul className='movie-generes-list'>
-          <li>Action</li>
-          <li>Comedy</li>
-          <li>Sci-Fi</li>
-          <li>Horror</li>
-          <li>Drama</li>
-          <li>Documentary</li>
-        </ul>
-      </div>
-    </div>
-    <div className='load-more'>
-      <div className='load-previous'>-</div>
-      <span>1</span>
-      <div className='load-next'>+</div>
-    </div>
-  </div>;
-
-const ShowInfoMovie = () => <div className='main-container-show-info'>
-        <MovieDetails />
-        <MoreLikeThis />
-</div>;
+import ContentMainPage from './components/ContentMainPage.jsx';
+import ContentSearchPage from './components/ContentSearchPage.jsx';
+import ContentShowInfoMovie from './components/ContentShowInfoMovie.jsx'
 
 function App() {
   return (
     <div className='App'>
       <SearchBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/search-movie" element={<SearchMovie />} />
-        <Route path="/search-people" element={<Home />} />
-        <Route path="/movie-details" element={<ShowInfoMovie />} />
+        <Route path="/" element={<ContentMainPage />} />
+        <Route path="/search-movie" element={<ContentSearchPage ruta/>} />
+        <Route path="/movie-details" element={<ContentShowInfoMovie />} />
       </Routes>
     </div>
-  )
+  );
 }
 
 export default App;
