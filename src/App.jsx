@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import CardMovie from './templates/CardMovie.jsx'
-import SearchBar from './templates/SearchBar.jsx'
-import CardPeople from './templates/CardPeople.jsx'
+import CardMovie from './components/CardMovie.jsx'
+import SearchBar from './components/SearchBar.jsx'
+import CardPeople from './components/CardPeople.jsx'
 import { Route, Routes } from "react-router-dom";
+import MovieDetails from './components/MovieDetails.jsx'
+import MoreLikeThis from './components/MoreLikeThis.jsx'
 
 const Home = () => 
   <div className='main-container'>
@@ -14,44 +16,7 @@ const Home = () =>
             title='Popeye'
             rating='9.5'
           />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-        </div>
-        <h2>Top TV Shows</h2>
-        <div className='movies-shows-container'>
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
-          <CardMovie
-            image='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fnewmovies55%2F&psig=AOvVaw2zWPdxgJP2n3KqdlxC4y10&ust=1719531625782000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCH1s-4-oYDFQAAAAAdAAAAABAE'
-            title='Popeye'
-            rating='9.5'
-          />
+          
         </div>
         <h2>Top Celebrities</h2>
         <div className='movies-shows-container'>
@@ -125,6 +90,11 @@ const SearchMovie = () =>
     </div>
   </div>;
 
+const ShowInfoMovie = () => <div className='main-container-show-info'>
+        <MovieDetails />
+        <MoreLikeThis />
+</div>;
+
 function App() {
   return (
     <div className='App'>
@@ -133,6 +103,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/search-movie" element={<SearchMovie />} />
         <Route path="/search-people" element={<Home />} />
+        <Route path="/movie-details" element={<ShowInfoMovie />} />
       </Routes>
     </div>
   )
