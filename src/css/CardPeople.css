@@ -1,0 +1,16 @@
+.card-people {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-celebritie {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.name-celebritie {
+    margin-top: 10px;
+}

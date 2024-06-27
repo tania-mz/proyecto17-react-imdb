@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 import CardMovie from './templates/CardMovie.jsx'
+import SearchBar from './templates/SearchBar.jsx'
+import CardPeople from './templates/CardPeople.jsx'
 
 function App() {
 
   return (
     <>
+      <SearchBar />
       <div className='main-container'>
         <div className='movies-shows-container'>
           <CardMovie
@@ -50,6 +53,12 @@ function App() {
             title='Popeye'
             rating='9.5'
           />
+        </div>
+        <div className='movies-shows-container'>
+          <CardPeople nameCelebritie='Popeye' />
+          <CardPeople nameCelebritie='Popeye' />
+          <CardPeople nameCelebritie='Popeye' />
+          <CardPeople nameCelebritie='Popeye' />
         </div>
       </div>
     </>

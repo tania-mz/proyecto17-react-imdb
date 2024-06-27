@@ -1,23 +1,15 @@
 import React from "react";
 import star from '../assets/star.png'
 import popeye from '../assets/popeye.jpeg'
-import '../css/CardMovie.css'
+import '../css/CardPeople.css'
 
-function CardMovie(props) {
-
+function CardPeople(props) {
     return (
-        <div className='card-movie'>
-            <img src={popeye} alt={props.title} className='img-movie'/>
-            <div className='info-movie'>
-                <div className='rating'>
-                    <p>{props.rating}</p>
-                    <img className='star-rating' src={star} alt='star' />
-                </div>
-                <h3>{props.title}</h3>
-                <div className='button-watch-movie'>Watch movie</div>
-            </div>
+        <div className='card-people'>
+            <img src={popeye} alt={props.title} className='img-celebritie' />
+            <h2 className="name-celebritie">{props.nameCelebritie}</h2>
         </div>
     );
 }
 
-export default CardMovie;
+export default CardPeople;
